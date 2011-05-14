@@ -1,0 +1,3 @@
+include easy_api/config/deployment.ini_tmpl
+recursive-include easy_api/public *
+recursive-include easy_api/templates *
