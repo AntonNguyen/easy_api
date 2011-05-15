@@ -1,7 +1,5 @@
 """The application's model objects"""
 from easy_api.model.meta import Session, Base
-
-from easy_api.model.history import History
 from easy_api.model.user import User
 
 

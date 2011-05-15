@@ -1,19 +1,12 @@
-This file is for you to describe the easy_api application. Typically
-you would include information such as the information below:
+Roadmap
 
-Installation and Setup
-======================
+Subdomain selection (Then API Key Selection if more then one)
+->Add Subdomain
+->Add API Key
 
-Install ``easy_api`` using easy_install::
 
-    easy_install easy_api
+History for subdomain
 
-Make a config file as follows::
-
-    paster make-config easy_api config.ini
-
-Tweak the config file as appropriate and then setup the application::
-
-    paster setup-app config.ini
-
-Then you are ready to go.
+Colored XML request and response
+http://www.webdesignbooth.com/9-useful-javascript-syntax-highlighting-scripts/
+http://startbigthinksmall.wordpress.com/2008/10/30/beautyofcode-jquery-plugin-for-syntax-highlighting/
