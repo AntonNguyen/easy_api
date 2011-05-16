@@ -34,7 +34,9 @@
     			$.ajax({
     				type: "Get",
     				url: '/request/listUsers',
-    				success: function(users) {
+    				success: function(data) {
+    				    var users = data.users;
+    				    
     				    $('#previousUserList').html('');
     				    
                         for (var i=0; i < users.length; i++) {

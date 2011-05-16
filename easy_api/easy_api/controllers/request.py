@@ -52,7 +52,9 @@ class RequestController(BaseController):
                     Session.add(user)
                     Session.commit()
 
-            return dict(response=content)
+                return dict(response=content)
+            else:
+                return dict(response='Uh oh! Something messed up. =( Is your API URL or Token correct?')                
         except:
             return dict(response='Uh oh! Something messed up. =( Is your API URL or Token correct?')
             
@@ -65,9 +67,9 @@ class RequestController(BaseController):
             for user in userQuery.all():
                 users.append(dict(url=user.url, token=user.token))
                 
-            return users
+            return dict(users=users)
         except:
-            return []
+            return dict(users=[])
 
     @jsonify
     def listURLs(self):
@@ -75,9 +77,9 @@ class RequestController(BaseController):
             userQuery = Session.query(User)
             url = [user.url for user in userQuery.all()]
 
-            return url
+            return dict(urls=url)
         except:
-            return []
+            return dict(urls=[])
 
     @jsonify
     def listTokens(self):
@@ -85,6 +87,6 @@ class RequestController(BaseController):
             userQuery = Session.query(User)
             tokens = [user.token for user in userQuery.all()]
 
-            return tokens
+            return dict(tokens=tokens)
         except:
-            return []
+            return dict(tokens=[])
